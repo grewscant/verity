@@ -1,21 +1,15 @@
 const colors = {
-  /** #91CEFA */
-  "blue-0": "#91CEFA",
+  /** #2B2B2B */
+  "grey-1": "#2B2B2B",
 
-  /** #50B0F4 */
-  "blue-1": "#50B0F4",
+  /** #E5E5E5 */
+  "grey-0": "#E5E5E5",
 
-  /** #0B8CEA */
-  "blue-2": "#0B8CEA",
+  /** #D1C4E9 */
+  "purple-0": "#D1C4E9",
 
-  /** #7A7A7A */
-  "grey-0": "#7A7A7A",
-
-  /** #959595 */
-  "grey-1": "#959595",
-
-  /** #464646 */
-  "grey-2": "#464646",
+  /** #503582 */
+  "purple-1": "#503582",
 };
 
 export default colors;
