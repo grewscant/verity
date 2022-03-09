@@ -1,7 +1,12 @@
 import type { NextPage } from "next";
+import { Navbar } from "../components/Navbar";
 
 const Home: NextPage = () => {
-  return <div>This is Verity</div>;
+  return (
+    <div>
+      <Navbar title="V" />
+    </div>
+  );
 };
 
 export default Home;
