@@ -8,9 +8,9 @@ const StyledNav = styled.nav`
   align-items: center;
   max-width: 100vw;
   background-color: ${theme.colors["purple-0"]};
-  padding: 8px 64px;
+  padding: 8px 36px;
   font-family: ${theme.fonts.primary};
-  box-shadow: 0px 2px 10px ${theme.colors["purple-0"]};
+  box-shadow: 0px 2px 10px #cdb1ff;
 
   p {
     margin: 0px;
@@ -20,7 +20,7 @@ const StyledNav = styled.nav`
   }
 
   a {
-    margin-right: 16px;
+    margin-right: 20px;
     font-size: 20px;
     line-height: 20px;
     text-decoration: none;
