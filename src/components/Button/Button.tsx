@@ -3,7 +3,7 @@ import styled from "styled-components";
 import theme from "../../theme";
 
 const StyledButton = styled.button`
-  background-color: ${theme.colors["blue-2"]};
+  background-color: ${theme.colors["purple-1"]};
   font-family: ${theme.fonts.primary};
   font-weight: ${theme.fontWeights.extrabold};
   font-size: 16px;

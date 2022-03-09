@@ -24,6 +24,7 @@ export interface IconProps {
   className?: string;
 }
 
+// eslint-disable-next-line react/display-name
 const Icon = React.forwardRef<
   HTMLDivElement,
   IconProps & HTMLAttributes<HTMLDivElement>
