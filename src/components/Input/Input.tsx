@@ -11,7 +11,7 @@ const StyledInputTitle = styled.p(
     font-size: 12px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: ${theme.colors["grey-2"]};
+    color: ${theme.colors["grey-1"]};
   `
 );
 
@@ -35,7 +35,7 @@ const StyledInputField = styled.input(
     font-family: ${theme.fonts.primary};
     font-weight: ${theme.fontWeights.semibold};
     font-size: 18px;
-    color: ${theme.colors["grey-2"]};
+    color: ${theme.colors["grey-1"]};
 
     &[type="file"] {
       cursor: pointer;
@@ -47,7 +47,7 @@ const StyledInputField = styled.input(
 
     &:focus {
       outline: none;
-      border-color: ${theme.colors["blue-2"]};
+      border-color: ${theme.colors["purple-1"]};
     }
   `
 );
