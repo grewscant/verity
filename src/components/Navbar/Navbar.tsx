@@ -52,7 +52,7 @@ interface NavbarLink {
 const MENU_LINKS: Array<NavbarLink> = [
   {
     label: "Home",
-    href: "/home",
+    href: "/",
   },
   {
     label: "Create",
