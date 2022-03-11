@@ -1,15 +1,9 @@
 import styled from "styled-components";
 import type { NextPage } from "next";
-import { Navbar } from "../components/Navbar";
 import Image from "next/image";
 
-const MainContainer = styled.div(
-  ({ theme }) => `
-    width: 100vw;
-    height: 100vh;
-    background-color: ${theme.colors["purple-0"]};
-  `
-);
+import { MainContainer } from "../components/MainContainer";
+import { Navbar } from "../components/Navbar";
 
 const Flex = styled.div`
   display: flex;
