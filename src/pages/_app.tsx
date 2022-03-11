@@ -1,5 +1,6 @@
 import type { AppProps } from "next/app";
 import { createGlobalStyle } from "styled-components";
+import { Navbar } from "../components/Navbar";
 import { ThemeProvider } from "../components/ThemeProvider";
 
 const GlobalStyles = createGlobalStyle`
