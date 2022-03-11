@@ -6,7 +6,7 @@ const StyledButton = styled.button`
   background-color: ${theme.colors["purple-1"]};
   font-family: ${theme.fonts.primary};
   font-weight: ${theme.fontWeights.extrabold};
-  font-size: 16px;
+  font-size: 18px;
   box-sizing: border-box;
   color: white;
   letter-spacing: 0.15em;
@@ -16,6 +16,7 @@ const StyledButton = styled.button`
   border: none;
   border-radius: 12px;
   cursor: pointer;
+  margin-top: 7%;
 
   &:active {
     transform: scale(0.98);
