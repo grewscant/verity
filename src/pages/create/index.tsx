@@ -1,10 +1,11 @@
 import { NextPage } from "next";
+import { MainContainer } from "../../components/MainContainer";
 import { Navbar } from "../../components/Navbar";
 
 const Create: NextPage = () => (
-  <div>
+  <MainContainer>
     <Navbar title="V" />
-  </div>
+  </MainContainer>
 );
 
 export default Create;
