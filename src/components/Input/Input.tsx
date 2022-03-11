@@ -8,17 +8,18 @@ const StyledInputTitle = styled.p(
   () => css`
     font-family: ${theme.fonts.primary};
     font-weight: ${theme.fontWeights.extrabold};
-    font-size: 12px;
+    font-size: 16px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: ${theme.colors["grey-1"]};
+    color: ${theme.colors["purple-1"]};
+    margin-top: 5%;
   `
 );
 
 const StyledInputInfo = styled.p`
   font-family: ${theme.fonts.primary};
   font-weight: ${theme.fontWeights.bold};
-  color: ${theme.colors["grey-0"]};
+  color: ${theme.colors["purple-1"]};
   font-size: 12px;
   margin-top: 0;
 `;
@@ -27,23 +28,16 @@ const StyledInputField = styled.input(
   () => css`
     border-style: solid;
     border-radius: 8px;
-    border-width: 2px;
+    border-width: 3px;
     min-width: 400px;
     padding: 12px;
     box-sizing: border-box;
-    border-color: ${theme.colors["grey-1"]};
+    background-color: ${theme.colors["purple-0"]};
+    border-color: ${theme.colors["purple-1"]};
     font-family: ${theme.fonts.primary};
     font-weight: ${theme.fontWeights.semibold};
     font-size: 18px;
-    color: ${theme.colors["grey-1"]};
-
-    &[type="file"] {
-      cursor: pointer;
-    }
-
-    &[type="file"]::file-selector-button {
-      display: none;
-    }
+    color: ${theme.colors["purple-1"]};
 
     &:focus {
       outline: none;
