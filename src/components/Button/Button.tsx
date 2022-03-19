@@ -26,10 +26,11 @@ const StyledButton = styled.button`
 interface ButtonProps {
   /** The text to display on the button */
   children: React.ReactNode;
+  onClick?: () => void;
 }
 
-const Button = ({ children }: ButtonProps): JSX.Element => {
-  return <StyledButton>{children}</StyledButton>;
+const Button = ({ children, onClick }: ButtonProps): JSX.Element => {
+  return <StyledButton onClick={onClick}>{children}</StyledButton>;
 };
 
 export { Button };
