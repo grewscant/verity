@@ -13,10 +13,14 @@ interface StyledCardProps {
 const StyledCard = styled.div<StyledCardProps>(
   ({ backgroundColor, spacing }) => css`
     background-color: ${backgroundColor ? colors[backgroundColor] : "white"};
-    border-radius: 8px;
+    border-radius: 12px;
     box-sizing: border-box;
     padding: 22px;
-    margin-bottom: 16px;
+    margin: 2px;
+    font-family: ${theme.fonts.primary};
+    font-weight: ${theme.fontWeights.semibold};
+    font-size: 32px;
+    color: ${theme.colors["grey-0"]};
 
     & > *:not(:last-child) {
       ${spacing
