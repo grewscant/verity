@@ -21,6 +21,7 @@ const StyledNav = styled.nav`
 
   a {
     margin-right: 20px;
+    margin-left: 4px;
     font-size: 20px;
     line-height: 20px;
     text-decoration: none;
@@ -42,6 +43,7 @@ const StyledDiv = styled.div`
 
 interface NavbarProps {
   title: string;
+  userAddress?: string;
 }
 
 interface NavbarLink {
@@ -64,7 +66,7 @@ const MENU_LINKS: Array<NavbarLink> = [
   },
 ];
 
-const Navbar = ({ title }: NavbarProps): JSX.Element => {
+const Navbar = ({ title, userAddress }: NavbarProps): JSX.Element => {
   return (
     <React.Fragment>
       <StyledNav>
@@ -77,7 +79,7 @@ const Navbar = ({ title }: NavbarProps): JSX.Element => {
               </Link>
             ))}
           </ul>
-          <StyledDiv style={{ width: "300px" }}>
+          <StyledDiv style={{ width: "max-content" }}>
             <svg
               width="30"
               height="30"
@@ -90,7 +92,9 @@ const Navbar = ({ title }: NavbarProps): JSX.Element => {
                 fill="#2B2B2B"
               />
             </svg>
-            <Link href="/connect">Connect MetaMask Wallet</Link>
+            <Link href="/connect">
+              {userAddress ? userAddress : "Connect MetaMask Wallet"}
+            </Link>
           </StyledDiv>
         </StyledDiv>
       </StyledNav>
