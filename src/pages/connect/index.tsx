@@ -16,6 +16,7 @@ const Flex = styled.div`
 
 const Connect: NextPage = () => {
   const [balance, setBalance] = useState("");
+  const [userAddress, setUserAddress] = useState("");
 
   const getDetails = async () => {
     const [account] = await window.ethereum.request({
@@ -25,11 +26,12 @@ const Connect: NextPage = () => {
     const balance = await provider.getBalance(account);
 
     setBalance(ethers.utils.formatEther(balance));
+    setUserAddress(account);
   };
 
   return (
     <MainContainer>
-      <Navbar title="V" />
+      <Navbar title="V" userAddress={userAddress} />
       <Flex
         style={{
           height: "70%",
