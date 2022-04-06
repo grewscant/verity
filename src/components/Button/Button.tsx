@@ -27,10 +27,25 @@ interface ButtonProps {
   /** The text to display on the button */
   children: React.ReactNode;
   onClick?: () => void;
+  disabled?: boolean;
+  cursor?: string;
 }
 
-const Button = ({ children, onClick }: ButtonProps): JSX.Element => {
-  return <StyledButton onClick={onClick}>{children}</StyledButton>;
+const Button = ({
+  children,
+  onClick,
+  disabled,
+  cursor,
+}: ButtonProps): JSX.Element => {
+  return (
+    <StyledButton
+      onClick={onClick}
+      disabled={disabled}
+      style={{ cursor: cursor }}
+    >
+      {children}
+    </StyledButton>
+  );
 };
 
 export { Button };

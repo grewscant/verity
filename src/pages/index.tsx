@@ -45,7 +45,7 @@ const Home: NextPage = () => {
         <Flex style={{ height: "max-content", flexDirection: "column" }}>
           <Heading>Sneaker buying Re-invented</Heading>
           <SubHeading>
-            Verity allows you to buy sneakers as ERC721 NFT-tokens with $ETH.{" "}
+            Verity allows you to buy sneakers as ERC721 NFT-tokens with $ETH{" "}
           </SubHeading>
         </Flex>
         <Image
