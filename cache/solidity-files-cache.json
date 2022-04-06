@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/home/gndhrv/WebDev/verity/contracts/Verinft.sol": {
-      "lastModificationDate": 1647609564391,
-      "contentHash": "6bcc1c69f364a352d8e2c6dc60a01292",
+      "lastModificationDate": 1649137365125,
+      "contentHash": "8293e93ac7d91f67c6c6a96c80c48885",
       "sourceName": "contracts/Verinft.sol",
       "solcConfig": {
         "version": "0.8.4",
