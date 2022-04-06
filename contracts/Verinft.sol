@@ -11,7 +11,6 @@ contract Verinft is ERC721, ERC721URIStorage, Ownable {
 
     Counters.Counter private _tokenIdCounter;
 
-    // mapping of strings to ints to keep track of the existing URIs
     mapping(string => uint8) existingURIs;
 
     constructor() ERC721("Verinft", "VRT") {}
@@ -22,12 +21,13 @@ contract Verinft is ERC721, ERC721URIStorage, Ownable {
 
     function safeMint(address to, string memory uri) public onlyOwner {
         uint256 tokenId = _tokenIdCounter.current();
+
         _tokenIdCounter.increment();
         _safeMint(to, tokenId);
         _setTokenURI(tokenId, uri);
-    }
 
-    // The following functions are overrides required by Solidity.
+        existingURIs[uri] = 1;
+    }
 
     function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) {
         super._burn(tokenId);
@@ -51,7 +51,7 @@ contract Verinft is ERC721, ERC721URIStorage, Ownable {
       string memory metadataURI
     ) public payable returns (uint256) {
       require(existingURIs[metadataURI] != 1, "[ERROR] NFT already minted");
-      require(msg.value >= 0.05 ether, "[ERROR] Need to pay up");
+      require(msg.value >= 50 ether, "[ERROR] Need to pay up");
 
       uint256 newItemId = _tokenIdCounter.current();
       _tokenIdCounter.increment();

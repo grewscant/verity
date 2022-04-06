@@ -46,7 +46,7 @@ const Create: NextPage = () => (
         {INPUT_TITLES.map((input) => (
           <Input title={input.title} />
         ))}
-        <Button children="Create my NFT!" />
+        <Button children="Create the NFT!" />
       </Flex>
     </Flex>
   </MainContainer>
