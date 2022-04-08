@@ -51,15 +51,21 @@ const Explore: NextPage = () => {
   return (
     <MainContainer>
       <Navbar title="V" />
-      <Grid>
-        {Array(totalMinted + 1)
-          .fill(0)
-          .map((_, i) => (
-            <Flex key={i}>
-              <NFT tokenId={i + 1} getCount={getCount} />
-            </Flex>
-          ))}
-      </Grid>
+      <Flex
+        style={{
+          paddingLeft: "7%",
+        }}
+      >
+        <Grid>
+          {Array(totalMinted + 1)
+            .fill(0)
+            .map((_, i) => (
+              <Flex key={i}>
+                <NFT tokenId={i + 1} getCount={getCount} />
+              </Flex>
+            ))}
+        </Grid>
+      </Flex>
     </MainContainer>
   );
 };
@@ -67,7 +73,8 @@ const Explore: NextPage = () => {
 function NFT({ tokenId, getCount }: { tokenId: number; getCount: () => void }) {
   const contentId = "QmVWJUKeifmxGdBmFdxZVgF5hy2ZEE1uWeLBZzCMGGBJWU";
   const metadataURI = `${contentId}/${tokenId}.json`;
-  const imageURI = `https://gateway.pinata.cloud/ipfs/${contentId}/${tokenId}.png`;
+  //const imageURI = `https://gateway.pinata.cloud/ipfs/${contentId}/${tokenId}.png`;
+  const imageURI = `/${tokenId}.png`;
 
   const [isMinted, setIsMinted] = useState(false);
 
@@ -138,7 +145,8 @@ function NFT({ tokenId, getCount }: { tokenId: number; getCount: () => void }) {
         src={
           isMinted
             ? imageURI
-            : "https://gateway.pinata.cloud/ipfs/QmWFbzxwi9k7ZXGWnrcYYQYamcTUkgjUYi7jZbQoUT4Ybw/placeholder.png"
+            : //"https://gateway.pinata.cloud/ipfs/QmWFbzxwi9k7ZXGWnrcYYQYamcTUkgjUYi7jZbQoUT4Ybw/placeholder.png"
+              "/placeholder.png"
         }
       />
     </Flex>
